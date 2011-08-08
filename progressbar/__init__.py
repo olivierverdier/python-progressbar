@@ -265,11 +265,6 @@ class ProgressBar(object):
         'Updates the ProgressBar to a new value.'
 
         if value is not None and value is not UnknownLength:
-            if (self.maxval is not UnknownLength
-                and not 0 <= value <= self.maxval):
-
-                raise ValueError('Value out of range')
-
             self.currval = value
 
 
